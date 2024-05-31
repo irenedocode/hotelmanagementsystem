@@ -2,7 +2,7 @@
 
 $koneksi = mysqli_connect("localhost", "root", "", "user");
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -10,10 +10,16 @@ if(isset($_POST['submit'])) {
     $cekuser = mysqli_query($koneksi, $query);
 
     if ($cekuser && mysqli_num_rows($cekuser) > 0) {
-        header("Location: menu.php");
+        echo "<script>
+                alert('Welcome');
+                window.location.href = 'menu.php';
+              </script>";
         exit();
     } else {
-        header("Location: index.php");
+        echo "<script>
+                alert('Password or Username invalid');
+                window.location.href = 'index.php';
+              </script>";
         exit();
     }
 }
