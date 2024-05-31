@@ -13,7 +13,7 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="validasi.php" method="POST">
+                <form action="koneksi.php">
                     <h2>Login</h2>
                     <div class="inputbox">
                         <input type="text" name="username" required>
@@ -23,7 +23,7 @@
                         <input type="password" name="password" required>
                         <label for="">Password</label>
                     </div>
-                    <button type="submit" name="submit">Log in</button>
+                    <button type="submit">Log i</button>
                     <div class="register">
                         <p>Don't have a account? <a href="register.php">Register Here</a></p>
                     </div>
